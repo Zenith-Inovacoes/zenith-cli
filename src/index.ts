@@ -7,8 +7,7 @@ import inquirer from "inquirer";
 const chalk = Chalk.default;
 const templates = {
   next: {
-    "styled-components":
-      "https://github.com/Zenith-Inovacoes/next-andromeda-starter",
+    "styled-components": "",
     tailwind: "",
     andromeda: "https://github.com/Zenith-Inovacoes/next-andromeda-starter",
   },
@@ -26,7 +25,7 @@ async function createAndromedaProject(projectName: string) {
 async function createNextProject(
   projectName: string,
   template: string,
-  packageManager: string
+  packageManager: string = "pnpm"
 ) {
   console.log(chalk.blueBright("Baixando template..."));
 
@@ -61,12 +60,12 @@ program
     try {
       if (options.custom) {
         const answers = await inquirer.prompt([
-          {
-            type: "list",
-            name: "cssFramework",
-            message: "Qual framework css deseja utilizar?",
-            choices: ["styled-components"],
-          },
+          // {
+          //   type: "list",
+          //   name: "cssFramework",
+          //   message: "Qual framework css deseja utilizar?",
+          //   choices: ["styled-components"],
+          // },
           {
             type: "list",
             name: "packageManager",
