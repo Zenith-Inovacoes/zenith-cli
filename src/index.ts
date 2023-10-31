@@ -7,7 +7,8 @@ import inquirer from "inquirer";
 const chalk = Chalk.default;
 const templates = {
   next: {
-    "styled-components": "",
+    "styled-components":
+      "https://github.com/Zenith-Inovacoes/next-andromeda-starter",
     tailwind: "",
     andromeda: "https://github.com/Zenith-Inovacoes/next-andromeda-starter",
   },
@@ -64,7 +65,7 @@ program
             type: "list",
             name: "cssFramework",
             message: "Qual framework css deseja utilizar?",
-            choices: ["tailwind", "styled-components"],
+            choices: ["styled-components"],
           },
           {
             type: "list",
